@@ -12,15 +12,12 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 @keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.7);opacity:0}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ── TICKER ── */
 .top-bar{width:100%;background:#f5c842;color:#000;font-family:'Syne',sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;overflow:hidden;height:30px;display:flex;align-items:center}
 .ticker-track{display:flex;white-space:nowrap;animation:ticker 20s linear infinite}
 .ticker-track span{padding:0 32px}
 
-/* ── NAVBAR ── */
 .tb{width:100%;background:#0d0d14;border-bottom:1px solid #1e1e2e;padding:0 16px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:999}
 .li{display:flex;align-items:center;gap:9px}
 .ic{width:32px;height:32px;background:#1a1a26;border:1.5px solid #f5c842;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -30,7 +27,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 .pi{display:flex;align-items:center;gap:6px;background:rgba(245,200,66,.1);border:1px solid rgba(245,200,66,.25);border-radius:100px;padding:5px 11px;font-size:11px;font-weight:500;color:#f5c842;white-space:nowrap}
 .pd{width:6px;height:6px;border-radius:50%;background:#f5c842;animation:blink 1.8s ease-in-out infinite;flex-shrink:0}
 
-/* ── HERO ── */
 .hero{width:100%;position:relative;background:linear-gradient(135deg,#0f0f1a,#1a1020,#0f1a14);padding:40px 16px 50px;text-align:center;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(245,200,66,.13) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
 .hi{position:relative;z-index:1;max-width:600px;margin:0 auto;animation:fadeUp .8s ease both}
@@ -42,7 +38,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 .sub{font-size:14px;color:#6b6b85;margin-top:12px;line-height:1.6}
 .sub b{color:#e8e8f0;font-weight:500}
 
-/* ── COUNTDOWN ── */
 .countdown-section{background:#111118;border-top:1px solid #2a2a38;border-bottom:1px solid #2a2a38;padding:16px;text-align:center}
 .cd-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#6b6b85;margin-bottom:10px;display:block}
 .cd-boxes{display:flex;justify-content:center;align-items:center;gap:6px}
@@ -51,37 +46,33 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 .cd-unit{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#6b6b85;display:block;margin-top:2px}
 .cd-sep{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#2a2a38;padding-bottom:10px}
 
-/* ── FILTROS ── */
 .filters{display:flex;gap:7px;padding:14px 12px;overflow-x:auto;background:#0d0d14;border-bottom:1px solid #1e1e2e;scrollbar-width:none}
 .filters::-webkit-scrollbar{display:none}
 .filter-btn{background:transparent;border:1.5px solid #2a2a38;border-radius:100px;padding:6px 14px;font-size:11px;font-family:'DM Sans',sans-serif;cursor:pointer;white-space:nowrap;transition:all .2s;color:#8888a8;font-weight:500}
 .filter-btn:hover,.filter-btn.active{background:#f5c842;border-color:#f5c842;color:#000;font-weight:700}
 
-/* ── STATS ── */
 .sec{max-width:960px;margin:0 auto;padding:16px 12px 48px}
 .st{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a2a38;border-radius:12px;overflow:hidden;border:1px solid #2a2a38;margin-bottom:20px}
 .si{background:#16161f;padding:14px 8px;text-align:center}
 .sn{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#f5c842;display:block;line-height:1;margin-bottom:4px}
 .sl2{font-size:9px;color:#6b6b85;letter-spacing:1px;text-transform:uppercase;display:block}
 
-/* ── SECTION HEADER ── */
 .sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #2a2a38;margin-top:24px}
 .sh-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#6b6b85}
 .sh-badge{font-size:10px;color:#6b6b85;background:#16161f;border:1px solid #2a2a38;border-radius:100px;padding:3px 10px}
 
-/* ── GRID DE PRODUTOS — sempre 2 colunas ── */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px}
 
-/* ── CARD COMPACTO (estilo Shopee/Meli) ── */
 .card{background:#16161f;border:1px solid #2a2a38;border-radius:12px;overflow:hidden;transition:transform .2s,border-color .2s;display:flex;flex-direction:column;position:relative}
 .card:hover{transform:translateY(-2px);border-color:#f5c842}
-
 .card-badge{position:absolute;top:7px;left:7px;background:#f5c842;color:#000;font-family:'Syne',sans-serif;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 7px;border-radius:6px;z-index:2}
+.card-badge.red{background:#ff4444;color:#fff}
+.card-badge.gold{background:#f5c842;color:#000}
 
 .cimg{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#1a1a26}
 .cbody{padding:10px;display:flex;flex-direction:column;flex:1}
 .clb{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:5px}
-.ctt{font-size:13px;font-weight:700;color:#fff;line-height:1.3;display:block;margin-bottom:6px;/* 2 linhas max */overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ctt{font-size:13px;font-weight:700;color:#fff;line-height:1.3;display:block;margin-bottom:6px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .stars{color:#f5c842;font-size:11px;margin-bottom:6px;display:block}
 .stars span{color:#6b6b85;font-size:10px}
 .cpr-old{font-size:10px;color:#6b6b85;text-decoration:line-through;display:block;margin-bottom:1px}
@@ -91,13 +82,11 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 .btn{display:block;text-align:center;background:#f5c842;color:#000;text-decoration:none;padding:9px 8px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:11px;transition:background .2s;margin-top:auto}
 .btn:hover{background:#ffe066}
 
-/* ── CARD EM BREVE ── */
 .card-soon{background:#111118;border:1.5px dashed #2a2a38;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 12px;min-height:180px}
 .soon-icon{font-size:1.8rem;margin-bottom:8px;opacity:.5}
 .soon-label{color:#e8e8f0;font-size:12px;font-weight:700;display:block;margin-bottom:4px}
 .soon-text{font-size:11px;color:#6b6b85;line-height:1.5}
 
-/* ── CUPONS ── */
 .coupon-section{background:#111118;border-top:1px solid #2a2a38;padding:28px 12px}
 .coupon-inner{max-width:960px;margin:0 auto}
 .section-heading{font-family:'Syne',sans-serif;font-size:clamp(20px,5vw,28px);font-weight:800;color:#fff;margin-bottom:4px}
@@ -115,7 +104,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 .copy-btn.copied{background:#00e676}
 .coupon-expires{font-size:9px;color:#6b6b85;margin-top:8px;display:block}
 
-/* ── WHATSAPP ── */
 .wa-section{background:linear-gradient(135deg,#0f1a14,#0a0a0f);border-top:1px solid #1a2e20;padding:40px 16px;text-align:center}
 .wa-inner{max-width:440px;margin:0 auto}
 .wa-icon{font-size:2.8rem;margin-bottom:14px;display:block}
@@ -128,7 +116,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 .wa-feat{font-size:11px;color:#6b6b85;display:flex;align-items:center;gap:5px}
 .wa-feat::before{content:'✓';color:#25D366;font-weight:700}
 
-/* ── FOOTER ── */
 .foot{background:#111118;border-top:1px solid #2a2a38;padding:24px 16px;text-align:center}
 .fn{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#fff;display:block;margin-bottom:6px}
 .fn b{color:#f5c842}
@@ -137,7 +124,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 </head>
 <body>
 
-<!-- TICKER -->
 <div class="top-bar">
   <div class="ticker-track">
     <span>🔥 NOVA OFERTA ADICIONADA HOJE</span>
@@ -151,7 +137,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   </div>
 </div>
 
-<!-- NAVBAR -->
 <div class="tb">
   <div class="li">
     <div class="ic">
@@ -159,13 +144,12 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
     </div>
     <div class="lt">
       <span class="l1">Tem no <b>Link</b></span>
-      <span class="l2">Ofertas · Mercado Livre</span>
+      <span class="l2">Ofertas · Mercado Livre & Shopee</span>
     </div>
   </div>
   <div class="pi"><span class="pd"></span><span>Ofertas ao vivo</span></div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hi">
     <div class="badge"><span class="bd"></span>Promoções verificadas hoje</div>
@@ -174,7 +158,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   </div>
 </div>
 
-<!-- COUNTDOWN -->
 <div class="countdown-section">
   <span class="cd-label">⏰ Ofertas expiram em</span>
   <div class="cd-boxes">
@@ -186,7 +169,6 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   </div>
 </div>
 
-<!-- FILTROS -->
 <div class="filters">
   <button class="filter-btn active" onclick="filterCat('todos',this)">🛒 Todos</button>
   <button class="filter-btn" onclick="filterCat('ferramentas',this)">🔧 Ferramentas</button>
@@ -197,20 +179,41 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   <button class="filter-btn" onclick="filterCat('jardim',this)">🌿 Jardim</button>
 </div>
 
-<!-- PRODUTOS -->
 <div class="sec">
 
   <div class="st">
-    <div class="si"><span class="sn">5</span><span class="sl2">Ofertas hoje</span></div>
+    <div class="si"><span class="sn">8</span><span class="sl2">Ofertas hoje</span></div>
     <div class="si"><span class="sn">★4.8</span><span class="sl2">Avaliação</span></div>
     <div class="si"><span class="sn">Grátis</span><span class="sl2">Frete selecionados</span></div>
+  </div>
+
+  <!-- ELETRÔNICOS -->
+  <div class="sh" data-header="eletronicos"><span class="sh-title">📱 Eletrônicos</span><span class="sh-badge">Hoje</span></div>
+  <div class="grid2" data-section="eletronicos">
+    <div class="card" data-cat="eletronicos">
+      <div class="card-badge red">-45%</div>
+      <img class="cimg" src="powerbank.webp" alt="Power Bank 10000mAh"/>
+      <div class="cbody">
+        <span class="clb">📱 Eletrônico</span>
+        <span class="ctt">Carregador Portátil Mini Power Bank 10000mAh</span>
+        <span class="stars">★★★★☆ <span>(4.6 · 1,7mil)</span></span>
+        <span class="cpr-old">R$ 58,00</span>
+        <span class="cpr"><small>R$</small> 31,99</span>
+        <a class="btn" href="https://s.shopee.com.br/9fHlJfQU8h?share_channel_code=1" target="_blank" rel="nofollow">🛒 Comprar</a>
+      </div>
+    </div>
+    <div class="card-soon" data-cat="eletronicos">
+      <div class="soon-icon">💻</div>
+      <span class="soon-label">Em breve</span>
+      <span class="soon-text">Mais eletrônicos chegando! Entre no grupo do WhatsApp.</span>
+    </div>
   </div>
 
   <!-- FERRAMENTAS -->
   <div class="sh" data-header="ferramentas"><span class="sh-title">🔧 Ferramentas</span><span class="sh-badge">Hoje</span></div>
   <div class="grid2" data-section="ferramentas">
     <div class="card" data-cat="ferramentas">
-      <div class="card-badge">⭐ Top</div>
+      <div class="card-badge gold">⭐ Top</div>
       <img class="cimg" src="https://i.postimg.cc/bY7kbTtW/Screenshot-20260514-152832-038.png" alt="Parafusadeira WAP 12V"/>
       <div class="cbody">
         <span class="clb">🔧 Elétrica</span>
@@ -222,7 +225,7 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
       </div>
     </div>
     <div class="card" data-cat="ferramentas">
-      <div class="card-badge">-50%</div>
+      <div class="card-badge red">-50%</div>
       <img class="cimg" src="https://i.postimg.cc/L8ymSDKn/Screenshot-20260514-154726-796.png" alt="Kit 46 Peças"/>
       <div class="cbody">
         <span class="clb">🧰 Kit</span>
@@ -286,162 +289,37 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
         <a class="btn" href="https://meli.la/1HFFfH2" target="_blank" rel="nofollow">🛒 Comprar</a>
       </div>
     </div>
+    <div class="card" data-cat="casa">
+      <div class="card-badge red">-37%</div>
+      <img class="cimg" src="https://i.postimg.cc/bY7kbTtW/Screenshot-20260514-152832-038.png" alt="Kit Organizadores"/>
+      <div class="cbody">
+        <span class="clb">🏠 Organização</span>
+        <span class="ctt">Kit 10 Organizadores Multiuso para Geladeira</span>
+        <span class="stars">★★★★★ <span>(4.8)</span></span>
+        <span class="cpr-old">R$ 119,90</span>
+        <span class="cpr"><small>R$</small> 74,90</span>
+        <a class="btn" href="https://meli.la/1znbS2c" target="_blank" rel="nofollow">🛒 Comprar</a>
+      </div>
+    </div>
+    <!-- NOVO: ESPELHO LED -->
+    <div class="card" data-cat="casa">
+      <div class="card-badge gold">🏆 Nº1</div>
+      <img class="cimg" src="espelho.webp" alt="Espelho Oval LED"/>
+      <div class="cbody">
+        <span class="clb">🪞 Decoração</span>
+        <span class="ctt">Espelho Oval com LED Luz Quente e Fria</span>
+        <span class="stars">★★★★★ <span>(4.8 · 7,4mil)</span></span>
+        <span class="cpr-old">R$ 87,00</span>
+        <span class="cpr"><small>R$</small> 59,00</span>
+        <a class="btn" href="https://s.shopee.com.br/W3WOzDYm7?share_channel_code=1" target="_blank" rel="nofollow">🛒 Comprar</a>
+      </div>
+    </div>
     <div class="card-soon" data-cat="casa">
       <div class="soon-icon">🏠</div>
       <span class="soon-label">Em breve</span>
-      <span class="soon-text">Mais produtos para casa!</span>
-    </div>
-  </div>
-
-  <!-- ELETRÔNICOS -->
-  <div class="sh" data-header="eletronicos"><span class="sh-title">📱 Eletrônicos</span><span class="sh-badge">Em breve</span></div>
-  <div class="grid2" data-section="eletronicos">
-    <div class="card-soon" data-cat="eletronicos">
-      <div class="soon-icon">📱</div>
-      <span class="soon-label">Em breve</span>
-      <span class="soon-text">Eletrônicos com os melhores preços!</span>
-    </div>
-    <div class="card-soon" data-cat="eletronicos">
-      <div class="soon-icon">💻</div>
-      <span class="soon-label">Em breve</span>
-      <span class="soon-text">Entre no grupo do WhatsApp para saber primeiro!</span>
+      <span class="soon-text">Mais produtos para casa chegando!</span>
     </div>
   </div>
 
   <!-- ROUPAS -->
-  <div class="sh" data-header="roupas"><span class="sh-title">👗 Roupas</span><span class="sh-badge">Em breve</span></div>
-  <div class="grid2" data-section="roupas">
-    <div class="card-soon" data-cat="roupas">
-      <div class="soon-icon">👗</div>
-      <span class="soon-label">Em breve</span>
-      <span class="soon-text">Moda feminina e masculina!</span>
-    </div>
-    <div class="card-soon" data-cat="roupas">
-      <div class="soon-icon">👟</div>
-      <span class="soon-label">Em breve</span>
-      <span class="soon-text">Calçados e acessórios a caminho!</span>
-    </div>
-  </div>
-
-  <!-- BELEZA -->
-  <div class="sh" data-header="beleza"><span class="sh-title">💄 Beleza</span><span class="sh-badge">Em breve</span></div>
-  <div class="grid2" data-section="beleza">
-    <div class="card-soon" data-cat="beleza">
-      <div class="soon-icon">💄</div>
-      <span class="soon-label">Em breve</span>
-      <span class="soon-text">Produtos de beleza e cuidados pessoais!</span>
-    </div>
-    <div class="card-soon" data-cat="beleza">
-      <div class="soon-icon">🧴</div>
-      <span class="soon-label">Em breve</span>
-      <span class="soon-text">Perfumes, cosméticos e muito mais!</span>
-    </div>
-  </div>
-
-</div>
-
-<!-- CUPONS -->
-<div class="coupon-section">
-  <div class="coupon-inner">
-    <div class="section-heading">🏷️ Cupons de <em>Desconto</em></div>
-    <p class="section-sub">Copie o código e use na hora de finalizar a compra</p>
-    <div class="coupon-grid">
-      <div class="coupon-card">
-        <span class="coupon-store">Mercado Livre</span>
-        <span class="coupon-desc">10% OFF em Ferramentas selecionadas</span>
-        <div class="coupon-code-wrap">
-          <div class="coupon-code">MELI10</div>
-          <button class="copy-btn" onclick="copyCoupon(this,'MELI10')">Copiar</button>
-        </div>
-        <span class="coupon-expires">⏰ Válido até 31/05/2026</span>
-      </div>
-      <div class="coupon-card">
-        <span class="coupon-store">Mercado Livre</span>
-        <span class="coupon-desc">Frete grátis na primeira compra</span>
-        <div class="coupon-code-wrap">
-          <div class="coupon-code">FRETE1</div>
-          <button class="copy-btn" onclick="copyCoupon(this,'FRETE1')">Copiar</button>
-        </div>
-        <span class="coupon-expires">⏰ Válido até 30/06/2026</span>
-      </div>
-      <div class="coupon-card">
-        <span class="coupon-store">Mercado Livre</span>
-        <span class="coupon-desc">R$ 20 OFF em compras acima de R$ 100</span>
-        <div class="coupon-code-wrap">
-          <div class="coupon-code">LINK20</div>
-          <button class="copy-btn" onclick="copyCoupon(this,'LINK20')">Copiar</button>
-        </div>
-        <span class="coupon-expires">⏰ Válido até 15/06/2026</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- WHATSAPP -->
-<div class="wa-section">
-  <div class="wa-inner">
-    <span class="wa-icon">💬</span>
-    <div class="wa-title">Entre no nosso<br><em>Grupo do WhatsApp</em></div>
-    <p class="wa-desc">Receba as melhores ofertas direto no seu celular, antes de todo mundo. Todo dia novos links!</p>
-    <a class="btn-wa" href="https://chat.whatsapp.com/SEU_LINK_AQUI" target="_blank" rel="noopener">
-      <svg width="20" height="20" viewBox="0 0 32 32" fill="white"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.584 2.236 6.348L4.5 28l6.871-1.731A12.94 12.94 0 0016 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.978 0-3.843-.575-5.418-1.568l-.387-.233-4.08 1.028 1.056-3.97-.254-.41A10 10 0 016 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.29-7.45c-.29-.145-1.715-.846-1.98-.943-.265-.097-.458-.145-.65.145-.193.29-.748.943-.917 1.137-.169.193-.338.217-.627.072-.29-.145-1.222-.45-2.328-1.437-.86-.767-1.44-1.715-1.61-2.005-.169-.29-.018-.447.127-.591.13-.13.29-.338.435-.507.145-.169.193-.29.29-.483.097-.193.048-.362-.024-.507-.072-.145-.65-1.57-.89-2.15-.235-.563-.475-.486-.65-.495l-.554-.01c-.193 0-.507.072-.772.362-.265.29-1.013 1.013-1.013 2.47 0 1.456 1.037 2.863 1.181 3.056.145.193 2.04 3.115 4.942 4.37.69.298 1.228.476 1.648.61.692.22 1.322.188 1.82.114.555-.083 1.715-.702 1.957-1.38.24-.677.24-1.257.168-1.38-.072-.12-.265-.193-.555-.338z"/></svg>
-      Entrar no Grupo
-    </a>
-    <div class="wa-features">
-      <div class="wa-feat">Ofertas diárias</div>
-      <div class="wa-feat">100% gratuito</div>
-      <div class="wa-feat">Sem spam</div>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<div class="foot">
-  <span class="fn">Tem no <b>Link</b></span>
-  <span class="ft">
-    © 2026 · Afiliado Mercado Livre<br>
-    Os preços podem variar. Ao clicar você será redirecionado ao Mercado Livre.<br>
-    Este site participa do Programa de Afiliados do Mercado Livre.
-  </span>
-</div>
-
-<script>
-// COUNTDOWN
-function updateCountdown(){
-  const now = new Date();
-  const midnight = new Date();
-  midnight.setHours(23,59,59,999);
-  const diff = midnight - now;
-  document.getElementById('cd-h').textContent = String(Math.floor(diff/3600000)).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
-}
-updateCountdown();
-setInterval(updateCountdown,1000);
-
-// FILTRO
-function filterCat(cat, btn){
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  const sections = document.querySelectorAll('[data-section]');
-  const headers = document.querySelectorAll('[data-header]');
-  if(cat==='todos'){
-    sections.forEach(el=>el.style.display='');
-    headers.forEach(el=>el.style.display='');
-  } else {
-    sections.forEach(el=>{ el.style.display = el.dataset.section===cat ? '' : 'none'; });
-    headers.forEach(el=>{ el.style.display = el.dataset.header===cat ? '' : 'none'; });
-  }
-}
-
-// COPIAR CUPOM
-function copyCoupon(btn, code){
-  navigator.clipboard.writeText(code).then(()=>{
-    btn.textContent='✓ Copiado!';
-    btn.classList.add('copied');
-    setTimeout(()=>{ btn.textContent='Copiar'; btn.classList.remove('copied'); },2000);
-  });
-}
-</script>
-</body>
-</html>
+  <di
