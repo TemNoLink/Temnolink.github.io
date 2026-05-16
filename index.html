@@ -15,158 +15,129 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ── TICKER TOPO ── */
-.top-bar{width:100%;background:#f5c842;color:#000;font-family:'Syne',sans-serif;font-size:12px;font-weight:800;letter-spacing:1px;overflow:hidden;height:32px;display:flex;align-items:center}
+/* ── TICKER ── */
+.top-bar{width:100%;background:#f5c842;color:#000;font-family:'Syne',sans-serif;font-size:11px;font-weight:800;letter-spacing:1px;overflow:hidden;height:30px;display:flex;align-items:center}
 .ticker-track{display:flex;white-space:nowrap;animation:ticker 20s linear infinite}
-.ticker-track span{padding:0 40px}
+.ticker-track span{padding:0 32px}
 
 /* ── NAVBAR ── */
-.tb{width:100%;background:#0d0d14;border-bottom:1px solid #1e1e2e;padding:0 20px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:999}
+.tb{width:100%;background:#0d0d14;border-bottom:1px solid #1e1e2e;padding:0 16px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:999}
 .li{display:flex;align-items:center;gap:9px}
-.ic{width:34px;height:34px;background:#1a1a26;border:1.5px solid #f5c842;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.lt .l1{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#fff;letter-spacing:-.5px;display:block}
+.ic{width:32px;height:32px;background:#1a1a26;border:1.5px solid #f5c842;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lt .l1{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#fff;letter-spacing:-.5px;display:block}
 .lt .l1 b{color:#f5c842}
 .lt .l2{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#6b6b85;display:block}
-.pi{display:flex;align-items:center;gap:7px;background:rgba(245,200,66,.1);border:1px solid rgba(245,200,66,.25);border-radius:100px;padding:6px 13px;font-size:11px;font-weight:500;color:#f5c842;white-space:nowrap}
+.pi{display:flex;align-items:center;gap:6px;background:rgba(245,200,66,.1);border:1px solid rgba(245,200,66,.25);border-radius:100px;padding:5px 11px;font-size:11px;font-weight:500;color:#f5c842;white-space:nowrap}
 .pd{width:6px;height:6px;border-radius:50%;background:#f5c842;animation:blink 1.8s ease-in-out infinite;flex-shrink:0}
 
 /* ── HERO ── */
-.hero{width:100%;position:relative;background:linear-gradient(135deg,#0f0f1a,#1a1020,#0f1a14);padding:56px 20px 70px;text-align:center;overflow:hidden}
+.hero{width:100%;position:relative;background:linear-gradient(135deg,#0f0f1a,#1a1020,#0f1a14);padding:40px 16px 50px;text-align:center;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(245,200,66,.13) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
-.hi{position:relative;z-index:1;max-width:640px;margin:0 auto;animation:fadeUp .8s ease both}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,200,66,.1);border:1px solid rgba(245,200,66,.3);border-radius:100px;padding:6px 16px;font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#f5c842;margin-bottom:24px}
+.hi{position:relative;z-index:1;max-width:600px;margin:0 auto;animation:fadeUp .8s ease both}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,200,66,.1);border:1px solid rgba(245,200,66,.3);border-radius:100px;padding:5px 14px;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#f5c842;margin-bottom:18px}
 .bd{width:6px;height:6px;border-radius:50%;background:#f5c842;position:relative;flex-shrink:0}
 .bd::after{content:'';position:absolute;inset:-3px;border-radius:50%;border:1px solid #f5c842;animation:pulse 1.5s ease-out infinite}
-.h1t{font-family:'Syne',sans-serif;font-size:clamp(38px,10vw,82px);font-weight:800;line-height:1;color:#fff;letter-spacing:-2px;margin-bottom:8px}
+.h1t{font-family:'Syne',sans-serif;font-size:clamp(32px,9vw,70px);font-weight:800;line-height:1;color:#fff;letter-spacing:-2px;margin-bottom:8px}
 .h1t em{font-style:normal;color:#f5c842}
-.sub{font-size:15px;color:#6b6b85;margin-top:16px;line-height:1.6}
+.sub{font-size:14px;color:#6b6b85;margin-top:12px;line-height:1.6}
 .sub b{color:#e8e8f0;font-weight:500}
-.sc{margin-top:40px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#6b6b85;font-size:10px;letter-spacing:3px;text-transform:uppercase;animation:float 2.5s ease-in-out infinite}
-.sl{width:1px;height:36px;background:linear-gradient(to bottom,#f5c842,transparent)}
 
 /* ── COUNTDOWN ── */
-.countdown-section{background:#111118;border-top:1px solid #2a2a38;border-bottom:1px solid #2a2a38;padding:20px 16px;text-align:center}
-.cd-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#6b6b85;margin-bottom:12px;display:block}
-.cd-boxes{display:flex;justify-content:center;align-items:center;gap:8px}
-.cd-box{background:#16161f;border:1px solid #2a2a38;border-radius:10px;padding:10px 16px;min-width:64px;text-align:center}
-.cd-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#f5c842;display:block;line-height:1}
-.cd-unit{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b6b85;display:block;margin-top:3px}
-.cd-sep{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:#2a2a38;padding-bottom:12px}
+.countdown-section{background:#111118;border-top:1px solid #2a2a38;border-bottom:1px solid #2a2a38;padding:16px;text-align:center}
+.cd-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#6b6b85;margin-bottom:10px;display:block}
+.cd-boxes{display:flex;justify-content:center;align-items:center;gap:6px}
+.cd-box{background:#16161f;border:1px solid #2a2a38;border-radius:10px;padding:8px 14px;min-width:58px;text-align:center}
+.cd-num{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:#f5c842;display:block;line-height:1}
+.cd-unit{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#6b6b85;display:block;margin-top:2px}
+.cd-sep{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#2a2a38;padding-bottom:10px}
 
 /* ── FILTROS ── */
-.filters{display:flex;gap:8px;padding:18px 16px;overflow-x:auto;background:#0d0d14;border-bottom:1px solid #1e1e2e;scrollbar-width:none}
+.filters{display:flex;gap:7px;padding:14px 12px;overflow-x:auto;background:#0d0d14;border-bottom:1px solid #1e1e2e;scrollbar-width:none}
 .filters::-webkit-scrollbar{display:none}
-.filter-btn{background:transparent;border:1.5px solid #2a2a38;border-radius:100px;padding:7px 18px;font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;white-space:nowrap;transition:all .2s;color:#8888a8;font-weight:500}
+.filter-btn{background:transparent;border:1.5px solid #2a2a38;border-radius:100px;padding:6px 14px;font-size:11px;font-family:'DM Sans',sans-serif;cursor:pointer;white-space:nowrap;transition:all .2s;color:#8888a8;font-weight:500}
 .filter-btn:hover,.filter-btn.active{background:#f5c842;border-color:#f5c842;color:#000;font-weight:700}
 
-/* ── MAIN ── */
-.sec{max-width:960px;margin:0 auto;padding:32px 16px 48px}
+/* ── STATS ── */
+.sec{max-width:960px;margin:0 auto;padding:16px 12px 48px}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a2a38;border-radius:12px;overflow:hidden;border:1px solid #2a2a38;margin-bottom:20px}
+.si{background:#16161f;padding:14px 8px;text-align:center}
+.sn{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#f5c842;display:block;line-height:1;margin-bottom:4px}
+.sl2{font-size:9px;color:#6b6b85;letter-spacing:1px;text-transform:uppercase;display:block}
 
-/* STATS */
-.st{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2a2a38;border-radius:14px;overflow:hidden;border:1px solid #2a2a38;margin-bottom:40px}
-.si{background:#16161f;padding:20px;text-align:center}
-.sn{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:#f5c842;display:block;line-height:1;margin-bottom:5px}
-.sl2{font-size:10px;color:#6b6b85;letter-spacing:1px;text-transform:uppercase;display:block}
+/* ── SECTION HEADER ── */
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #2a2a38;margin-top:24px}
+.sh-title{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#6b6b85}
+.sh-badge{font-size:10px;color:#6b6b85;background:#16161f;border:1px solid #2a2a38;border-radius:100px;padding:3px 10px}
 
-/* SECTION HEADER */
-.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid #2a2a38;margin-top:36px}
-.sh:first-of-type{margin-top:0}
-.sh-title{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:#6b6b85}
-.sh-badge{font-size:11px;color:#6b6b85;background:#16161f;border:1px solid #2a2a38;border-radius:100px;padding:4px 12px}
+/* ── GRID DE PRODUTOS — sempre 2 colunas ── */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px}
 
-/* DESTAQUE */
-.feat{background:#16161f;border:1px solid #2a2a38;border-radius:15px;overflow:hidden;margin-bottom:16px;transition:border-color .2s}
-.feat:hover{border-color:#f5c842}
-.fimg{width:100%;height:240px;object-fit:cover;display:block;background:#1a1a26}
-.fbody{padding:22px}
-.ftag{display:inline-block;background:#f5c842;color:#000;font-family:'Syne',sans-serif;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px}
-.ftt{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;color:#fff;line-height:1.2;display:block;margin-bottom:14px}
-.fch{list-style:none;padding:0;margin-bottom:16px}
-.fch li{font-size:14px;color:#9090b0;padding:5px 0 5px 24px;position:relative}
-.fch li::before{content:'✓';position:absolute;left:0;color:#00e676;font-weight:700}
-.fpr{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:#fff;letter-spacing:-2px;display:block;margin-bottom:18px;line-height:1}
-.fpr small{font-size:18px;color:#f5c842;font-weight:700;letter-spacing:0}
-.fpr-old{font-size:14px;color:#6b6b85;text-decoration:line-through;display:block;margin-bottom:4px}
+/* ── CARD COMPACTO (estilo Shopee/Meli) ── */
+.card{background:#16161f;border:1px solid #2a2a38;border-radius:12px;overflow:hidden;transition:transform .2s,border-color .2s;display:flex;flex-direction:column;position:relative}
+.card:hover{transform:translateY(-2px);border-color:#f5c842}
 
-/* GRID */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:4px}
+.card-badge{position:absolute;top:7px;left:7px;background:#f5c842;color:#000;font-family:'Syne',sans-serif;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 7px;border-radius:6px;z-index:2}
 
-/* CARD */
-.card{background:#16161f;border:1px solid #2a2a38;border-radius:15px;overflow:hidden;transition:transform .2s,border-color .2s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-3px);border-color:#f5c842}
-.cimg{width:100%;height:170px;object-fit:cover;display:block;background:#1a1a26}
-.cbody{padding:14px;display:flex;flex-direction:column;flex:1}
-.clb{font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:7px}
-.ctt{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#fff;line-height:1.25;display:block;margin-bottom:8px}
-.stars{color:#f5c842;font-size:12px;margin-bottom:8px;display:block}
-.stars span{color:#6b6b85;font-size:11px}
-.cdesc{font-size:12px;color:#8888a8;line-height:1.8;margin-bottom:12px;flex:1}
-.cpr-old{font-size:12px;color:#6b6b85;text-decoration:line-through;display:block;margin-bottom:2px}
-.cpr{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#fff;letter-spacing:-1px;display:block;margin-bottom:12px}
-.cpr small{font-size:13px;color:#f5c842;font-weight:700;letter-spacing:0}
+.cimg{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#1a1a26}
+.cbody{padding:10px;display:flex;flex-direction:column;flex:1}
+.clb{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#f5c842;display:block;margin-bottom:5px}
+.ctt{font-size:13px;font-weight:700;color:#fff;line-height:1.3;display:block;margin-bottom:6px;/* 2 linhas max */overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.stars{color:#f5c842;font-size:11px;margin-bottom:6px;display:block}
+.stars span{color:#6b6b85;font-size:10px}
+.cpr-old{font-size:10px;color:#6b6b85;text-decoration:line-through;display:block;margin-bottom:1px}
+.cpr{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.5px;display:block;margin-bottom:10px;line-height:1}
+.cpr small{font-size:11px;color:#f5c842;font-weight:700;letter-spacing:0}
 
-/* CARD EM BREVE */
-.card-soon{background:#111118;border:1.5px dashed #2a2a38;border-radius:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 16px;min-height:220px}
-.soon-icon{font-size:2.2rem;margin-bottom:10px;opacity:.5}
-.soon-label{color:#e8e8f0;font-size:13px;font-weight:700;display:block;margin-bottom:6px}
-.soon-text{font-size:12px;color:#6b6b85;line-height:1.6}
+.btn{display:block;text-align:center;background:#f5c842;color:#000;text-decoration:none;padding:9px 8px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:11px;transition:background .2s;margin-top:auto}
+.btn:hover{background:#ffe066}
 
-/* BUTTONS */
-.btn{display:block;text-align:center;background:#f5c842;color:#000;text-decoration:none;padding:12px;border-radius:10px;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;transition:background .2s,transform .1s;margin-top:auto}
-.btn:hover{background:#ffe066;transform:scale(1.02)}
+/* ── CARD EM BREVE ── */
+.card-soon{background:#111118;border:1.5px dashed #2a2a38;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px 12px;min-height:180px}
+.soon-icon{font-size:1.8rem;margin-bottom:8px;opacity:.5}
+.soon-label{color:#e8e8f0;font-size:12px;font-weight:700;display:block;margin-bottom:4px}
+.soon-text{font-size:11px;color:#6b6b85;line-height:1.5}
 
 /* ── CUPONS ── */
-.coupon-section{background:#111118;border-top:1px solid #2a2a38;padding:36px 16px}
+.coupon-section{background:#111118;border-top:1px solid #2a2a38;padding:28px 12px}
 .coupon-inner{max-width:960px;margin:0 auto}
-.section-heading{font-family:'Syne',sans-serif;font-size:clamp(22px,5vw,32px);font-weight:800;color:#fff;margin-bottom:6px}
+.section-heading{font-family:'Syne',sans-serif;font-size:clamp(20px,5vw,28px);font-weight:800;color:#fff;margin-bottom:4px}
 .section-heading em{color:#f5c842;font-style:normal}
-.section-sub{font-size:13px;color:#6b6b85;margin-bottom:24px}
-.coupon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
-.coupon-card{background:#16161f;border:1px solid #2a2a38;border-radius:14px;padding:18px;position:relative;overflow:hidden}
+.section-sub{font-size:12px;color:#6b6b85;margin-bottom:18px}
+.coupon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.coupon-card{background:#16161f;border:1px solid #2a2a38;border-radius:12px;padding:16px;position:relative;overflow:hidden}
 .coupon-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:#f5c842;border-radius:4px 0 0 4px}
-.coupon-store{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#6b6b85;margin-bottom:6px;display:block}
-.coupon-desc{font-size:14px;font-weight:700;color:#fff;margin-bottom:12px;display:block;line-height:1.4}
-.coupon-code-wrap{display:flex;gap:8px;align-items:center}
-.coupon-code{flex:1;background:#0a0a0f;border:1.5px dashed #f5c842;border-radius:8px;padding:9px 12px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;color:#f5c842;letter-spacing:2px;text-align:center}
-.copy-btn{background:#f5c842;color:#000;border:none;border-radius:8px;padding:9px 14px;font-family:'Syne',sans-serif;font-weight:800;font-size:12px;cursor:pointer;transition:background .2s;white-space:nowrap}
+.coupon-store{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#6b6b85;margin-bottom:5px;display:block}
+.coupon-desc{font-size:13px;font-weight:700;color:#fff;margin-bottom:10px;display:block;line-height:1.4}
+.coupon-code-wrap{display:flex;gap:7px;align-items:center}
+.coupon-code{flex:1;background:#0a0a0f;border:1.5px dashed #f5c842;border-radius:7px;padding:8px 10px;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:#f5c842;letter-spacing:2px;text-align:center}
+.copy-btn{background:#f5c842;color:#000;border:none;border-radius:7px;padding:8px 12px;font-family:'Syne',sans-serif;font-weight:800;font-size:11px;cursor:pointer;transition:background .2s;white-space:nowrap}
 .copy-btn:hover{background:#ffe066}
 .copy-btn.copied{background:#00e676}
-.coupon-expires{font-size:10px;color:#6b6b85;margin-top:10px;display:block}
+.coupon-expires{font-size:9px;color:#6b6b85;margin-top:8px;display:block}
 
 /* ── WHATSAPP ── */
-.wa-section{background:linear-gradient(135deg,#0f1a14,#0a0a0f);border-top:1px solid #1a2e20;padding:48px 16px;text-align:center}
-.wa-inner{max-width:480px;margin:0 auto}
-.wa-icon{font-size:3rem;margin-bottom:16px;display:block}
-.wa-title{font-family:'Syne',sans-serif;font-size:clamp(22px,5vw,32px);font-weight:800;color:#fff;margin-bottom:12px;line-height:1.1}
+.wa-section{background:linear-gradient(135deg,#0f1a14,#0a0a0f);border-top:1px solid #1a2e20;padding:40px 16px;text-align:center}
+.wa-inner{max-width:440px;margin:0 auto}
+.wa-icon{font-size:2.8rem;margin-bottom:14px;display:block}
+.wa-title{font-family:'Syne',sans-serif;font-size:clamp(20px,5vw,28px);font-weight:800;color:#fff;margin-bottom:10px;line-height:1.1}
 .wa-title em{color:#25D366;font-style:normal}
-.wa-desc{font-size:14px;color:#8888a8;line-height:1.7;margin-bottom:28px}
-.btn-wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;padding:14px 28px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:800;font-size:15px;transition:background .2s,transform .1s}
+.wa-desc{font-size:13px;color:#8888a8;line-height:1.7;margin-bottom:22px}
+.btn-wa{display:inline-flex;align-items:center;gap:9px;background:#25D366;color:#fff;text-decoration:none;padding:13px 24px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;transition:background .2s,transform .1s}
 .btn-wa:hover{background:#1ebe5a;transform:scale(1.03)}
-.wa-features{display:flex;justify-content:center;gap:24px;margin-top:20px;flex-wrap:wrap}
-.wa-feat{font-size:12px;color:#6b6b85;display:flex;align-items:center;gap:6px}
+.wa-features{display:flex;justify-content:center;gap:20px;margin-top:16px;flex-wrap:wrap}
+.wa-feat{font-size:11px;color:#6b6b85;display:flex;align-items:center;gap:5px}
 .wa-feat::before{content:'✓';color:#25D366;font-weight:700}
 
 /* ── FOOTER ── */
-.foot{background:#111118;border-top:1px solid #2a2a38;padding:28px 16px;text-align:center}
-.fn{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#fff;display:block;margin-bottom:6px}
+.foot{background:#111118;border-top:1px solid #2a2a38;padding:24px 16px;text-align:center}
+.fn{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#fff;display:block;margin-bottom:6px}
 .fn b{color:#f5c842}
-.ft{font-size:12px;color:#6b6b85;line-height:1.8;display:block}
-
-/* ── RESPONSIVE ── */
-@media(min-width:600px){
-  .feat-h{display:grid;grid-template-columns:1fr 1fr}
-  .feat-h .fimg{height:100%;max-height:340px}
-}
-@media(max-width:500px){
-  .grid2{grid-template-columns:1fr}
-  .cd-box{min-width:52px;padding:8px 12px}
-  .cd-num{font-size:22px}
-}
+.ft{font-size:11px;color:#6b6b85;line-height:1.8;display:block}
 </style>
 </head>
 <body>
 
-<!-- TICKER TOPO -->
+<!-- TICKER -->
 <div class="top-bar">
   <div class="ticker-track">
     <span>🔥 NOVA OFERTA ADICIONADA HOJE</span>
@@ -184,7 +155,7 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 <div class="tb">
   <div class="li">
     <div class="ic">
-      <svg width="22" height="14" viewBox="0 0 22 14"><rect x="0" y="3" width="10" height="8" rx="4" fill="none" stroke="#f5c842" stroke-width="2"/><rect x="8" y="3" width="10" height="8" rx="4" fill="none" stroke="#f5c842" stroke-width="2"/></svg>
+      <svg width="20" height="13" viewBox="0 0 22 14"><rect x="0" y="3" width="10" height="8" rx="4" fill="none" stroke="#f5c842" stroke-width="2"/><rect x="8" y="3" width="10" height="8" rx="4" fill="none" stroke="#f5c842" stroke-width="2"/></svg>
     </div>
     <div class="lt">
       <span class="l1">Tem no <b>Link</b></span>
@@ -199,12 +170,11 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   <div class="hi">
     <div class="badge"><span class="bd"></span>Promoções verificadas hoje</div>
     <div class="h1t">As Melhores<br><em>Ofertas</em></div>
-    <p class="sub">Produtos selecionados com os <b>maiores descontos</b>.<br>Preços verificados hoje.</p>
-    <div class="sc"><div class="sl"></div>Ver ofertas</div>
+    <p class="sub">Produtos com os <b>maiores descontos</b>.<br>Preços verificados hoje.</p>
   </div>
 </div>
 
-<!-- CONTAGEM REGRESSIVA -->
+<!-- COUNTDOWN -->
 <div class="countdown-section">
   <span class="cd-label">⏰ Ofertas expiram em</span>
   <div class="cd-boxes">
@@ -232,125 +202,119 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
 
   <div class="st">
     <div class="si"><span class="sn">5</span><span class="sl2">Ofertas hoje</span></div>
-    <div class="si"><span class="sn">★ 4.8</span><span class="sl2">Avaliação média</span></div>
+    <div class="si"><span class="sn">★4.8</span><span class="sl2">Avaliação</span></div>
     <div class="si"><span class="sn">Grátis</span><span class="sl2">Frete selecionados</span></div>
   </div>
 
   <!-- FERRAMENTAS -->
-  <div class="sh"><span class="sh-title">🔧 Ferramentas</span><span class="sh-badge">Atualizado hoje</span></div>
-
-  <div class="feat feat-h" data-cat="ferramentas">
-    <img class="fimg" src="https://i.postimg.cc/bY7kbTtW/Screenshot-20260514-152832-038.png" alt="Parafusadeira WAP 12V"/>
-    <div class="fbody">
-      <span class="ftag">⭐ Mais vendido</span>
-      <span class="clb">🔧 Ferramenta elétrica</span>
-      <span class="ftt">Parafusadeira e Furadeira WAP 12V</span>
-      <ul class="fch">
-        <li>Compacta e potente</li>
-        <li>Bateria recarregável inclusa</li>
-        <li>Ideal para casa e oficina</li>
-        <li>Excelente custo-benefício</li>
-      </ul>
-      <span class="stars">★★★★★ <span>(4.9 · 312 avaliações)</span></span>
-      <span class="fpr-old">R$ 189,90</span>
-      <span class="fpr"><small>R$</small> 119,97</span>
-      <a class="btn" href="https://meli.la/16oDGtD" target="_blank" rel="nofollow">🛒 Comprar no Mercado Livre</a>
-    </div>
-  </div>
-
-  <div class="grid2">
+  <div class="sh" data-header="ferramentas"><span class="sh-title">🔧 Ferramentas</span><span class="sh-badge">Hoje</span></div>
+  <div class="grid2" data-section="ferramentas">
     <div class="card" data-cat="ferramentas">
+      <div class="card-badge">⭐ Top</div>
+      <img class="cimg" src="https://i.postimg.cc/bY7kbTtW/Screenshot-20260514-152832-038.png" alt="Parafusadeira WAP 12V"/>
+      <div class="cbody">
+        <span class="clb">🔧 Elétrica</span>
+        <span class="ctt">Parafusadeira e Furadeira WAP 12V</span>
+        <span class="stars">★★★★★ <span>(4.9)</span></span>
+        <span class="cpr-old">R$ 189,90</span>
+        <span class="cpr"><small>R$</small> 119,97</span>
+        <a class="btn" href="https://meli.la/16oDGtD" target="_blank" rel="nofollow">🛒 Comprar</a>
+      </div>
+    </div>
+    <div class="card" data-cat="ferramentas">
+      <div class="card-badge">-50%</div>
       <img class="cimg" src="https://i.postimg.cc/L8ymSDKn/Screenshot-20260514-154726-796.png" alt="Kit 46 Peças"/>
       <div class="cbody">
-        <span class="clb">🧰 Kit completo</span>
-        <span class="ctt">Kit Ferramentas 46 Peças</span>
+        <span class="clb">🧰 Kit</span>
+        <span class="ctt">Kit Ferramentas 46 Peças + Maleta</span>
         <span class="stars">★★★★★ <span>(4.8)</span></span>
-        <div class="cdesc">✓ Chaves e soquetes variados<br>✓ Maleta compacta inclusa<br>✓ Ideal para manutenção</div>
         <span class="cpr-old">R$ 59,90</span>
         <span class="cpr"><small>R$</small> 29,90</span>
-        <a class="btn" href="https://meli.la/2ChppW1" target="_blank" rel="nofollow">🛒 Comprar Agora</a>
+        <a class="btn" href="https://meli.la/2ChppW1" target="_blank" rel="nofollow">🛒 Comprar</a>
       </div>
     </div>
     <div class="card" data-cat="ferramentas">
       <img class="cimg" src="https://i.postimg.cc/kg6zBPBz/Screenshot-20260514-164307-729.png" alt="Kit 200 Peças"/>
       <div class="cbody">
         <span class="clb">🧰 Super kit</span>
-        <span class="ctt">Kit Ferramentas 200 Peças</span>
+        <span class="ctt">Kit Ferramentas 200 Peças Completo</span>
         <span class="stars">★★★★☆ <span>(4.7)</span></span>
-        <div class="cdesc">✓ Maleta completa<br>✓ Ferramentas variadas<br>✓ Casa e oficina</div>
         <span class="cpr-old">R$ 99,90</span>
         <span class="cpr"><small>R$</small> 58,41</span>
-        <a class="btn" href="https://meli.la/1ar69tV" target="_blank" rel="nofollow">🛒 Comprar Agora</a>
+        <a class="btn" href="https://meli.la/1ar69tV" target="_blank" rel="nofollow">🛒 Comprar</a>
       </div>
+    </div>
+    <div class="card-soon" data-cat="ferramentas">
+      <div class="soon-icon">🔨</div>
+      <span class="soon-label">Em breve</span>
+      <span class="soon-text">Mais ferramentas chegando!</span>
     </div>
   </div>
 
   <!-- JARDIM -->
-  <div class="sh" data-section="jardim"><span class="sh-title">🌿 Jardim</span><span class="sh-badge">Atualizado hoje</span></div>
+  <div class="sh" data-header="jardim"><span class="sh-title">🌿 Jardim</span><span class="sh-badge">Hoje</span></div>
   <div class="grid2" data-section="jardim">
     <div class="card" data-cat="jardim">
       <img class="cimg" src="https://i.postimg.cc/651FWp5M/Screenshot-20260514-155017-556.png" alt="Mangueira 30m"/>
       <div class="cbody">
         <span class="clb">🌿 Jardim</span>
-        <span class="ctt">Mangueira Jardim 30 Metros</span>
+        <span class="ctt">Mangueira Jardim 30 Metros Reforçada</span>
         <span class="stars">★★★★★ <span>(4.9)</span></span>
-        <div class="cdesc">✓ Flexível e reforçada<br>✓ Anti dobra<br>✓ Excelente durabilidade</div>
         <span class="cpr-old">R$ 79,90</span>
         <span class="cpr"><small>R$</small> 47,72</span>
-        <a class="btn" href="https://meli.la/1eq4LtG" target="_blank" rel="nofollow">🛒 Comprar Agora</a>
+        <a class="btn" href="https://meli.la/1eq4LtG" target="_blank" rel="nofollow">🛒 Comprar</a>
       </div>
     </div>
     <div class="card-soon" data-cat="jardim">
       <div class="soon-icon">🌱</div>
       <span class="soon-label">Em breve</span>
-      <span class="soon-text">Novos produtos de jardim chegando em breve!</span>
+      <span class="soon-text">Novos produtos de jardim!</span>
     </div>
   </div>
 
   <!-- CASA -->
-  <div class="sh" data-section="casa"><span class="sh-title">🏠 Casa</span><span class="sh-badge">Atualizado hoje</span></div>
+  <div class="sh" data-header="casa"><span class="sh-title">🏠 Casa</span><span class="sh-badge">Hoje</span></div>
   <div class="grid2" data-section="casa">
     <div class="card" data-cat="casa">
       <img class="cimg" src="https://i.postimg.cc/j2q8RHrV/Screenshot-20260514-154758.png" alt="Manta Líquida"/>
       <div class="cbody">
-        <span class="clb">🏠 Impermeabilização</span>
+        <span class="clb">🏠 Casa</span>
         <span class="ctt">Manta Líquida Impermeabilizante</span>
         <span class="stars">★★★★★ <span>(4.8)</span></span>
-        <div class="cdesc">✓ Combate infiltrações<br>✓ Fácil aplicação<br>✓ Uso em telhados e lajes</div>
         <span class="cpr-old">R$ 89,90</span>
         <span class="cpr"><small>R$</small> 57,12</span>
-        <a class="btn" href="https://meli.la/1HFFfH2" target="_blank" rel="nofollow">🛒 Comprar Agora</a>
+        <a class="btn" href="https://meli.la/1HFFfH2" target="_blank" rel="nofollow">🛒 Comprar</a>
       </div>
     </div>
     <div class="card-soon" data-cat="casa">
       <div class="soon-icon">🏠</div>
       <span class="soon-label">Em breve</span>
-      <span class="soon-text">Mais produtos para casa chegando!</span>
+      <span class="soon-text">Mais produtos para casa!</span>
     </div>
   </div>
 
   <!-- ELETRÔNICOS -->
-  <div class="sh" data-section="eletronicos"><span class="sh-title">📱 Eletrônicos</span><span class="sh-badge">Em breve</span></div>
+  <div class="sh" data-header="eletronicos"><span class="sh-title">📱 Eletrônicos</span><span class="sh-badge">Em breve</span></div>
   <div class="grid2" data-section="eletronicos">
     <div class="card-soon" data-cat="eletronicos">
       <div class="soon-icon">📱</div>
       <span class="soon-label">Em breve</span>
-      <span class="soon-text">Eletrônicos com os melhores preços chegando!</span>
+      <span class="soon-text">Eletrônicos com os melhores preços!</span>
     </div>
     <div class="card-soon" data-cat="eletronicos">
       <div class="soon-icon">💻</div>
       <span class="soon-label">Em breve</span>
-      <span class="soon-text">Entre no grupo do WhatsApp para ser o primeiro a saber!</span>
+      <span class="soon-text">Entre no grupo do WhatsApp para saber primeiro!</span>
     </div>
   </div>
 
   <!-- ROUPAS -->
-  <div class="sh" data-section="roupas"><span class="sh-title">👗 Roupas</span><span class="sh-badge">Em breve</span></div>
+  <div class="sh" data-header="roupas"><span class="sh-title">👗 Roupas</span><span class="sh-badge">Em breve</span></div>
   <div class="grid2" data-section="roupas">
     <div class="card-soon" data-cat="roupas">
       <div class="soon-icon">👗</div>
       <span class="soon-label">Em breve</span>
-      <span class="soon-text">Moda feminina e masculina com os melhores preços!</span>
+      <span class="soon-text">Moda feminina e masculina!</span>
     </div>
     <div class="card-soon" data-cat="roupas">
       <div class="soon-icon">👟</div>
@@ -360,7 +324,7 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   </div>
 
   <!-- BELEZA -->
-  <div class="sh" data-section="beleza"><span class="sh-title">💄 Beleza</span><span class="sh-badge">Em breve</span></div>
+  <div class="sh" data-header="beleza"><span class="sh-title">💄 Beleza</span><span class="sh-badge">Em breve</span></div>
   <div class="grid2" data-section="beleza">
     <div class="card-soon" data-cat="beleza">
       <div class="soon-icon">💄</div>
@@ -418,10 +382,9 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   <div class="wa-inner">
     <span class="wa-icon">💬</span>
     <div class="wa-title">Entre no nosso<br><em>Grupo do WhatsApp</em></div>
-    <p class="wa-desc">Receba as melhores ofertas direto no seu celular, antes de todo mundo. Todo dia novos links com desconto!</p>
-    <!-- ⚠️ SUBSTITUA pelo link do seu grupo do WhatsApp -->
+    <p class="wa-desc">Receba as melhores ofertas direto no seu celular, antes de todo mundo. Todo dia novos links!</p>
     <a class="btn-wa" href="https://chat.whatsapp.com/SEU_LINK_AQUI" target="_blank" rel="noopener">
-      <svg width="22" height="22" viewBox="0 0 32 32" fill="white"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.584 2.236 6.348L4.5 28l6.871-1.731A12.94 12.94 0 0016 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.978 0-3.843-.575-5.418-1.568l-.387-.233-4.08 1.028 1.056-3.97-.254-.41A10 10 0 016 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.29-7.45c-.29-.145-1.715-.846-1.98-.943-.265-.097-.458-.145-.65.145-.193.29-.748.943-.917 1.137-.169.193-.338.217-.627.072-.29-.145-1.222-.45-2.328-1.437-.86-.767-1.44-1.715-1.61-2.005-.169-.29-.018-.447.127-.591.13-.13.29-.338.435-.507.145-.169.193-.29.29-.483.097-.193.048-.362-.024-.507-.072-.145-.65-1.57-.89-2.15-.235-.563-.475-.486-.65-.495l-.554-.01c-.193 0-.507.072-.772.362-.265.29-1.013 1.013-1.013 2.47 0 1.456 1.037 2.863 1.181 3.056.145.193 2.04 3.115 4.942 4.37.69.298 1.228.476 1.648.61.692.22 1.322.188 1.82.114.555-.083 1.715-.702 1.957-1.38.24-.677.24-1.257.168-1.38-.072-.12-.265-.193-.555-.338z"/></svg>
+      <svg width="20" height="20" viewBox="0 0 32 32" fill="white"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.584 2.236 6.348L4.5 28l6.871-1.731A12.94 12.94 0 0016 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.978 0-3.843-.575-5.418-1.568l-.387-.233-4.08 1.028 1.056-3.97-.254-.41A10 10 0 016 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.29-7.45c-.29-.145-1.715-.846-1.98-.943-.265-.097-.458-.145-.65.145-.193.29-.748.943-.917 1.137-.169.193-.338.217-.627.072-.29-.145-1.222-.45-2.328-1.437-.86-.767-1.44-1.715-1.61-2.005-.169-.29-.018-.447.127-.591.13-.13.29-.338.435-.507.145-.169.193-.29.29-.483.097-.193.048-.362-.024-.507-.072-.145-.65-1.57-.89-2.15-.235-.563-.475-.486-.65-.495l-.554-.01c-.193 0-.507.072-.772.362-.265.29-1.013 1.013-1.013 2.47 0 1.456 1.037 2.863 1.181 3.056.145.193 2.04 3.115 4.942 4.37.69.298 1.228.476 1.648.61.692.22 1.322.188 1.82.114.555-.083 1.715-.702 1.957-1.38.24-.677.24-1.257.168-1.38-.072-.12-.265-.193-.555-.338z"/></svg>
       Entrar no Grupo
     </a>
     <div class="wa-features">
@@ -437,74 +400,46 @@ html,body{background:#0a0a0f;font-family:'DM Sans',Arial,sans-serif;color:#e8e8f
   <span class="fn">Tem no <b>Link</b></span>
   <span class="ft">
     © 2026 · Afiliado Mercado Livre<br>
-    Os preços e disponibilidade podem variar. Ao clicar nos links você será redirecionado ao Mercado Livre.<br>
+    Os preços podem variar. Ao clicar você será redirecionado ao Mercado Livre.<br>
     Este site participa do Programa de Afiliados do Mercado Livre.
   </span>
 </div>
 
 <script>
-// CONTAGEM REGRESSIVA até meia-noite
+// COUNTDOWN
 function updateCountdown(){
   const now = new Date();
   const midnight = new Date();
   midnight.setHours(23,59,59,999);
   const diff = midnight - now;
-  const h = Math.floor(diff/3600000);
-  const m = Math.floor((diff%3600000)/60000);
-  const s = Math.floor((diff%60000)/1000);
-  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+  document.getElementById('cd-h').textContent = String(Math.floor(diff/3600000)).padStart(2,'0');
+  document.getElementById('cd-m').textContent = String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+  document.getElementById('cd-s').textContent = String(Math.floor((diff%60000)/1000)).padStart(2,'0');
 }
 updateCountdown();
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown,1000);
 
-// FILTRO DE CATEGORIAS
+// FILTRO
 function filterCat(cat, btn){
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-
-  const allCards = document.querySelectorAll('[data-cat]');
-  const allSections = document.querySelectorAll('[data-section]');
-  const allHeaders = document.querySelectorAll('.sh');
-  const featEl = document.querySelector('.feat');
-
-  if(cat === 'todos'){
-    allCards.forEach(el => el.style.display = '');
-    allSections.forEach(el => el.style.display = '');
-    allHeaders.forEach(el => el.style.display = '');
-    if(featEl) featEl.style.display = '';
+  const sections = document.querySelectorAll('[data-section]');
+  const headers = document.querySelectorAll('[data-header]');
+  if(cat==='todos'){
+    sections.forEach(el=>el.style.display='');
+    headers.forEach(el=>el.style.display='');
   } else {
-    // Mostrar/ocultar cards
-    allCards.forEach(el => {
-      el.style.display = el.dataset.cat === cat ? '' : 'none';
-    });
-    // Mostrar/ocultar grids
-    allSections.forEach(el => {
-      el.style.display = el.dataset.section === cat ? '' : 'none';
-    });
-    // Mostrar/ocultar headers
-    allHeaders.forEach(el => {
-      const txt = el.querySelector('.sh-title');
-      const map = {ferramentas:'🔧',eletronicos:'📱',casa:'🏠',roupas:'👗',beleza:'💄',jardim:'🌿'};
-      const show = txt && txt.textContent.includes(map[cat] || '');
-      el.style.display = show ? '' : 'none';
-    });
-    // Destaque (ferramentas)
-    if(featEl) featEl.style.display = (cat === 'ferramentas') ? '' : 'none';
+    sections.forEach(el=>{ el.style.display = el.dataset.section===cat ? '' : 'none'; });
+    headers.forEach(el=>{ el.style.display = el.dataset.header===cat ? '' : 'none'; });
   }
 }
 
 // COPIAR CUPOM
 function copyCoupon(btn, code){
-  navigator.clipboard.writeText(code).then(() => {
-    const orig = btn.textContent;
-    btn.textContent = '✓ Copiado!';
+  navigator.clipboard.writeText(code).then(()=>{
+    btn.textContent='✓ Copiado!';
     btn.classList.add('copied');
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.classList.remove('copied');
-    }, 2000);
+    setTimeout(()=>{ btn.textContent='Copiar'; btn.classList.remove('copied'); },2000);
   });
 }
 </script>
